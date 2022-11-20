@@ -1,0 +1,516 @@
+{
+  "address": "0x77317202e1e03FdEAd3c15733b137576075F8878",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract FNS",
+          "name": "_fns",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "controller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "enabled",
+          "type": "bool"
+        }
+      ],
+      "name": "ControllerChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract NameResolver",
+          "name": "resolver",
+          "type": "address"
+        }
+      ],
+      "name": "DefaultResolverChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "node",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ReverseClaimed",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "claim",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "resolver",
+          "type": "address"
+        }
+      ],
+      "name": "claimForAddr",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "resolver",
+          "type": "address"
+        }
+      ],
+      "name": "claimWithResolver",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "controllers",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "defaultResolver",
+      "outputs": [
+        {
+          "internalType": "contract NameResolver",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "fns",
+      "outputs": [
+        {
+          "internalType": "contract FNS",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "node",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "controller",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "enabled",
+          "type": "bool"
+        }
+      ],
+      "name": "setController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "resolver",
+          "type": "address"
+        }
+      ],
+      "name": "setDefaultResolver",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "setName",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "resolver",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "setNameForAddr",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x39cc28bf607f0f076537a107785d333b0bdddd378d2defa8e9241748f75f8330",
+  "receipt": {
+    "to": null,
+    "from": "0x76346faC442F153ED8691fF88b1297643260d8a0",
+    "contractAddress": "0x77317202e1e03FdEAd3c15733b137576075F8878",
+    "transactionIndex": 0,
+    "gasUsed": "78011398",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "blockHash": "0x652120fd4cae6f9804a65af2d7ead53731f5de3d186fb14d67b73c0059547c56",
+    "transactionHash": "0x39cc28bf607f0f076537a107785d333b0bdddd378d2defa8e9241748f75f8330",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 5756,
+        "transactionHash": "0x39cc28bf607f0f076537a107785d333b0bdddd378d2defa8e9241748f75f8330",
+        "address": "0x77317202e1e03FdEAd3c15733b137576075F8878",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x00000000000000000000000076346fac442f153ed8691ff88b1297643260d8a0"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0x652120fd4cae6f9804a65af2d7ead53731f5de3d186fb14d67b73c0059547c56"
+      }
+    ],
+    "blockNumber": 5756,
+    "cumulativeGasUsed": "0",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xD7E020247e1e1686F50Bb4246Ca1AdFDC4609723"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "a6dd5ed36ca3a151ffb615c330a0b07c",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract FNS\",\"name\":\"_fns\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"controller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"enabled\",\"type\":\"bool\"}],\"name\":\"ControllerChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract NameResolver\",\"name\":\"resolver\",\"type\":\"address\"}],\"name\":\"DefaultResolverChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"ReverseClaimed\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"claim\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"}],\"name\":\"claimForAddr\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"}],\"name\":\"claimWithResolver\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"controllers\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"defaultResolver\",\"outputs\":[{\"internalType\":\"contract NameResolver\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"fns\",\"outputs\":[{\"internalType\":\"contract FNS\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"node\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"controller\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"enabled\",\"type\":\"bool\"}],\"name\":\"setController\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"}],\"name\":\"setDefaultResolver\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"setName\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"setNameForAddr\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"claim(address)\":{\"details\":\"Transfers ownership of the reverse FNS record associated with the      calling account.\",\"params\":{\"_owner\":\"The address to set as the owner of the reverse record in FNS.\"},\"returns\":{\"_0\":\"The FNS node hash of the reverse record.\"}},\"claimForAddr(address,address,address)\":{\"details\":\"Transfers ownership of the reverse FNS record associated with the      calling account.\",\"params\":{\"_owner\":\"The address to set as the owner of the reverse record in FNS.\",\"addr\":\"The reverse record to set\",\"resolver\":\"The resolver of the reverse node\"},\"returns\":{\"_0\":\"The FNS node hash of the reverse record.\"}},\"claimWithResolver(address,address)\":{\"details\":\"Transfers ownership of the reverse FNS record associated with the      calling account.\",\"params\":{\"_owner\":\"The address to set as the owner of the reverse record in FNS.\",\"resolver\":\"The address of the resolver to set; 0 to leave unchanged.\"},\"returns\":{\"_0\":\"The FNS node hash of the reverse record.\"}},\"constructor\":{\"details\":\"Constructor\",\"params\":{\"_fns\":\"The address of the FNS registry.\"}},\"node(address)\":{\"details\":\"Returns the node hash for a given account's reverse records.\",\"params\":{\"addr\":\"The address to hash\"},\"returns\":{\"_0\":\"The FNS node hash.\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setName(string)\":{\"details\":\"Sets the `name()` record for the reverse FNS record associated with the calling account. First updates the resolver to the default reverse resolver if necessary.\",\"params\":{\"name\":\"The name to set for this address.\"},\"returns\":{\"_0\":\"The FNS node hash of the reverse record.\"}},\"setNameForAddr(address,address,address,string)\":{\"details\":\"Sets the `name()` record for the reverse FNS record associated with the account provided. Updates the resolver to a designated resolver Only callable by controllers and authorised users\",\"params\":{\"_owner\":\"The owner of the reverse node\",\"addr\":\"The reverse record to set\",\"name\":\"The name to set for this address.\",\"resolver\":\"The resolver of the reverse node\"},\"returns\":{\"_0\":\"The FNS node hash of the reverse record.\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ReverseRegistrar.sol\":\"ReverseRegistrar\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/ResolverBase.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.17;\\n\\nimport \\\"./libs/ERC165.sol\\\";\\nimport \\\"./resolvers/IVersionableResolver.sol\\\";\\n\\nabstract contract ResolverBase is ERC165, IVersionableResolver {\\n    mapping(bytes32 => uint64) public recordVersions;\\n\\n    function isAuthorised(bytes32 node) internal view virtual returns (bool);\\n\\n    modifier authorised(bytes32 node) {\\n        require(isAuthorised(node));\\n        _;\\n    }\\n\\n    /**\\n     * Increments the record version associated with an FNS node.\\n     * May only be called by the owner of that node in the FNS registry.\\n     * @param node The node to update.\\n     */\\n    function clearRecords(bytes32 node) public virtual authorised(node) {\\n        recordVersions[node]++;\\n        emit VersionChanged(node, recordVersions[node]);\\n    }\\n\\n    function supportsInterface(bytes4 interfaceID) public view virtual override returns (bool) {\\n        return interfaceID == type(IVersionableResolver).interfaceId || super.supportsInterface(interfaceID);\\n    }\\n}\\n\",\"keccak256\":\"0x948efe8095dd2ec725f7d67706b0d46ce0feac630b2f6ff6d983f80c1bc59339\",\"license\":\"MIT\"},\"contracts/ReverseRegistrar.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.17;\\n\\nimport \\\"./interfaces/FNS.sol\\\";\\nimport \\\"./interfaces/IReverseRegistrar.sol\\\";\\nimport \\\"./libs/Controllable.sol\\\";\\nimport \\\"./libs/Ownable.sol\\\";\\nimport \\\"./resolvers/NameResolver.sol\\\";\\n\\nbytes32 constant lookup = 0x3031323334353637383961626364656600000000000000000000000000000000;\\n\\n// namehash('addr.reverse')\\nbytes32 constant ADDR_REVERSE_NODE = 0x91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2;\\n\\ncontract ReverseRegistrar is Controllable, IReverseRegistrar {\\n    FNS public immutable fns;\\n    NameResolver public defaultResolver;\\n\\n    event ReverseClaimed(address indexed addr, bytes32 indexed node);\\n    event DefaultResolverChanged(NameResolver indexed resolver);\\n\\n    /**\\n     * @dev Constructor\\n     * @param _fns The address of the FNS registry.\\n     */\\n    constructor(FNS _fns) {\\n        fns = _fns;\\n    }\\n\\n    modifier authorised(address addr) {\\n        require(\\n            addr == msg.sender ||\\n                controllers[msg.sender] ||\\n                fns.isApprovedForAll(addr, msg.sender) ||\\n                ownsContract(addr),\\n            \\\"ReverseRegistrar: Caller is not a controller or authorised by address or the address itself\\\"\\n        );\\n        _;\\n    }\\n\\n    function setDefaultResolver(address resolver) public override onlyOwner {\\n        require(address(resolver) != address(0), \\\"ReverseRegistrar: Resolver address must not be 0\\\");\\n        defaultResolver = NameResolver(resolver);\\n        emit DefaultResolverChanged(NameResolver(resolver));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the reverse FNS record associated with the\\n     *      calling account.\\n     * @param _owner The address to set as the owner of the reverse record in FNS.\\n     * @return The FNS node hash of the reverse record.\\n     */\\n    function claim(address _owner) public override returns (bytes32) {\\n        return claimForAddr(msg.sender, _owner, address(defaultResolver));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the reverse FNS record associated with the\\n     *      calling account.\\n     * @param addr The reverse record to set\\n     * @param _owner The address to set as the owner of the reverse record in FNS.\\n     * @param resolver The resolver of the reverse node\\n     * @return The FNS node hash of the reverse record.\\n     */\\n    function claimForAddr(\\n        address addr,\\n        address _owner,\\n        address resolver\\n    ) public override authorised(addr) returns (bytes32) {\\n        bytes32 labelHash = sha3HexAddress(addr);\\n        bytes32 reverseNode = keccak256(abi.encodePacked(ADDR_REVERSE_NODE, labelHash));\\n        emit ReverseClaimed(addr, reverseNode);\\n        fns.setSubnodeRecord(ADDR_REVERSE_NODE, labelHash, _owner, resolver, 0);\\n        return reverseNode;\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the reverse FNS record associated with the\\n     *      calling account.\\n     * @param _owner The address to set as the owner of the reverse record in FNS.\\n     * @param resolver The address of the resolver to set; 0 to leave unchanged.\\n     * @return The FNS node hash of the reverse record.\\n     */\\n    function claimWithResolver(address _owner, address resolver) public override returns (bytes32) {\\n        return claimForAddr(msg.sender, _owner, resolver);\\n    }\\n\\n    /**\\n     * @dev Sets the `name()` record for the reverse FNS record associated with\\n     * the calling account. First updates the resolver to the default reverse\\n     * resolver if necessary.\\n     * @param name The name to set for this address.\\n     * @return The FNS node hash of the reverse record.\\n     */\\n    function setName(string memory name) public override returns (bytes32) {\\n        return setNameForAddr(msg.sender, msg.sender, address(defaultResolver), name);\\n    }\\n\\n    /**\\n     * @dev Sets the `name()` record for the reverse FNS record associated with\\n     * the account provided. Updates the resolver to a designated resolver\\n     * Only callable by controllers and authorised users\\n     * @param addr The reverse record to set\\n     * @param _owner The owner of the reverse node\\n     * @param resolver The resolver of the reverse node\\n     * @param name The name to set for this address.\\n     * @return The FNS node hash of the reverse record.\\n     */\\n    function setNameForAddr(\\n        address addr,\\n        address _owner,\\n        address resolver,\\n        string memory name\\n    ) public override returns (bytes32) {\\n        bytes32 reverseNode = claimForAddr(addr, _owner, resolver);\\n        NameResolver(resolver).setName(reverseNode, name);\\n        return reverseNode;\\n    }\\n\\n    /**\\n     * @dev Returns the node hash for a given account's reverse records.\\n     * @param addr The address to hash\\n     * @return The FNS node hash.\\n     */\\n    function node(address addr) public pure override returns (bytes32) {\\n        return keccak256(abi.encodePacked(ADDR_REVERSE_NODE, sha3HexAddress(addr)));\\n    }\\n\\n    /**\\n     * @dev An optimised function to compute the sha3 of the lower-case\\n     *      hexadecimal representation of an address.\\n     * @param addr The address to hash\\n     * @return ret The SHA3 hash of the lower-case hexadecimal encoding of the\\n     *         input address.\\n     */\\n    function sha3HexAddress(address addr) private pure returns (bytes32 ret) {\\n        assembly {\\n            for {\\n                let i := 40\\n            } gt(i, 0) {\\n\\n            } {\\n                i := sub(i, 1)\\n                mstore8(i, byte(and(addr, 0xf), lookup))\\n                addr := div(addr, 0x10)\\n                i := sub(i, 1)\\n                mstore8(i, byte(and(addr, 0xf), lookup))\\n                addr := div(addr, 0x10)\\n            }\\n\\n            ret := keccak256(0, 40)\\n        }\\n    }\\n\\n    function ownsContract(address addr) internal view returns (bool) {\\n        try Ownable(addr).owner() returns (address owner) {\\n            return owner == msg.sender;\\n        } catch {\\n            return false;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x81da159bcfc75cfa173455aa8e71fd42dda3d49fef93c5928bdf1dbf59398ad4\",\"license\":\"MIT\"},\"contracts/interfaces/FNS.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.17;\\n\\ninterface FNS {\\n    // Logged when the owner of a node assigns a new owner to a subnode.\\n    event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner);\\n\\n    // Logged when the owner of a node transfers ownership to a new account.\\n    event Transfer(bytes32 indexed node, address owner);\\n\\n    // Logged when the resolver for a node changes.\\n    event NewResolver(bytes32 indexed node, address resolver);\\n\\n    // Logged when the TTL of a node changes\\n    event NewTTL(bytes32 indexed node, uint64 ttl);\\n\\n    // Logged when an operator is added or removed.\\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\\n    function setRecord(\\n        bytes32 node,\\n        address owner,\\n        address resolver,\\n        uint64 ttl\\n    ) external;\\n\\n    function setSubnodeRecord(\\n        bytes32 node,\\n        bytes32 label,\\n        address owner,\\n        address resolver,\\n        uint64 ttl\\n    ) external;\\n\\n    function setSubnodeOwner(\\n        bytes32 node,\\n        bytes32 label,\\n        address owner\\n    ) external returns (bytes32);\\n\\n    function setSubnodeResolver(\\n        bytes32 node,\\n        bytes32 label,\\n        address resolver\\n    ) external returns (bytes32);\\n\\n    function setResolver(bytes32 node, address resolver) external;\\n\\n    function setOwner(bytes32 node, address owner) external;\\n\\n    function setTTL(bytes32 node, uint64 ttl) external;\\n\\n    function setApprovalForAll(address operator, bool approved) external;\\n\\n    function owner(bytes32 node) external view returns (address);\\n\\n    function resolver(bytes32 node) external view returns (address);\\n\\n    function ttl(bytes32 node) external view returns (uint64);\\n\\n    function recordExists(bytes32 node) external view returns (bool);\\n\\n    function isApprovedForAll(address owner, address operator) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xefb72e4926d52eac293ce66685026bed612cc6dfeed69382729fc8b4b1497cf7\",\"license\":\"MIT\"},\"contracts/interfaces/IReverseRegistrar.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.17;\\n\\ninterface IReverseRegistrar {\\n    function setDefaultResolver(address resolver) external;\\n\\n    function claim(address owner) external returns (bytes32);\\n\\n    function claimForAddr(\\n        address addr,\\n        address owner,\\n        address resolver\\n    ) external returns (bytes32);\\n\\n    function claimWithResolver(address owner, address resolver) external returns (bytes32);\\n\\n    function setName(string memory name) external returns (bytes32);\\n\\n    function setNameForAddr(\\n        address addr,\\n        address owner,\\n        address resolver,\\n        string memory name\\n    ) external returns (bytes32);\\n\\n    function node(address addr) external pure returns (bytes32);\\n}\\n\",\"keccak256\":\"0x90ba11cde65ef5e5e0efb9dc0960986a9de2c4c8763e1fddd3f535683cc2c829\",\"license\":\"MIT\"},\"contracts/libs/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity >=0.8.17;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x29d9b1e5f92151c0a0f7f9bdd3feb9752ac02d489e51209b8d9dbf59b4ba6bb5\",\"license\":\"MIT\"},\"contracts/libs/Controllable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.17;\\n\\nimport \\\"./Ownable.sol\\\";\\n\\ncontract Controllable is Ownable {\\n    mapping(address => bool) public controllers;\\n\\n    event ControllerChanged(address indexed controller, bool enabled);\\n\\n    modifier onlyController() {\\n        require(controllers[msg.sender], \\\"Controllable: Caller is not a controller\\\");\\n        _;\\n    }\\n\\n    function setController(address controller, bool enabled) public onlyOwner {\\n        controllers[controller] = enabled;\\n        emit ControllerChanged(controller, enabled);\\n    }\\n}\\n\",\"keccak256\":\"0xcc59f0057e7ccecd7803e3bab2bbac174f6b30f36d5ba3e8d982b4dc8073253d\",\"license\":\"MIT\"},\"contracts/libs/ERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/ERC165.sol)\\npragma solidity >=0.8.17;\\n\\nimport \\\"./IERC165.sol\\\";\\n\\n/**\\n * @dev Implementation of the {IERC165} interface.\\n *\\n * Contracts that want to implement ERC165 should inherit from this contract and override {supportsInterface} to check\\n * for the additional interface id that will be supported. For example:\\n *\\n * ```solidity\\n * function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {\\n *     return interfaceId == type(MyInterface).interfaceId || super.supportsInterface(interfaceId);\\n * }\\n * ```\\n *\\n * Alternatively, {ERC165Storage} provides an easier to use but more expensive implementation.\\n */\\nabstract contract ERC165 is IERC165 {\\n    /**\\n     * @dev See {IERC165-supportsInterface}.\\n     */\\n    function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {\\n        return interfaceId == type(IERC165).interfaceId;\\n    }\\n}\\n\",\"keccak256\":\"0x4ed89043f667d51decc2231b67ea2d00dd6263bb5ea2b5acf6915e32c9dd2070\",\"license\":\"MIT\"},\"contracts/libs/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity >=0.8.17;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x491bff38bb07c6dea3f2f083094fce54377c073cdab1fbcbde78196a5878b1ef\",\"license\":\"MIT\"},\"contracts/libs/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (access/Ownable.sol)\\n\\npragma solidity >=0.8.17;\\n\\nimport \\\"./Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() {\\n        _transferOwnership(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0x66fba79f55141a7a0801cac3425a641c69472bc8997528ccfff2f002132fd715\",\"license\":\"MIT\"},\"contracts/resolvers/INameResolver.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.17;\\n\\ninterface INameResolver {\\n    event NameChanged(bytes32 indexed node, string name);\\n\\n    /**\\n     * Returns the name associated with an FNS node, for reverse records.\\n     * Defined in EIP181.\\n     * @param node The FNS node to query.\\n     * @return The associated name.\\n     */\\n    function name(bytes32 node) external view returns (string memory);\\n}\\n\",\"keccak256\":\"0x7440779c4bffbcb0de2e59b2ce088a5eb28a02355ee4e703c543cecbe2546fd0\",\"license\":\"MIT\"},\"contracts/resolvers/IVersionableResolver.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.17;\\n\\ninterface IVersionableResolver {\\n    event VersionChanged(bytes32 indexed node, uint64 newVersion);\\n\\n    function recordVersions(bytes32 node) external view returns (uint64);\\n}\\n\",\"keccak256\":\"0x338895bf2cb69806b1da5ccaffc7a3e47d199845ba00c76f51f4b0d5a3246a5f\",\"license\":\"MIT\"},\"contracts/resolvers/NameResolver.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.17;\\n\\nimport \\\"../ResolverBase.sol\\\";\\nimport \\\"./INameResolver.sol\\\";\\n\\nabstract contract NameResolver is INameResolver, ResolverBase {\\n    mapping(uint64 => mapping(bytes32 => string)) versionable_names;\\n\\n    /**\\n     * Sets the name associated with an FNS node, for reverse records.\\n     * May only be called by the owner of that node in the FNS registry.\\n     * @param node The node to update.\\n     */\\n    function setName(bytes32 node, string calldata newName) external virtual authorised(node) {\\n        versionable_names[recordVersions[node]][node] = newName;\\n        emit NameChanged(node, newName);\\n    }\\n\\n    /**\\n     * Returns the name associated with an FNS node, for reverse records.\\n     * Defined in EIP181.\\n     * @param node The FNS node to query.\\n     * @return The associated name.\\n     */\\n    function name(bytes32 node) external view virtual override returns (string memory) {\\n        return versionable_names[recordVersions[node]][node];\\n    }\\n\\n    function supportsInterface(bytes4 interfaceID) public view virtual override returns (bool) {\\n        return interfaceID == type(INameResolver).interfaceId || super.supportsInterface(interfaceID);\\n    }\\n}\\n\",\"keccak256\":\"0x63242b70ae1344abe9b4ef9f52211105042b8836eaeeebe5fde67c282e3be3ac\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a06040523480156200001157600080fd5b5060405162001891380380620018918339818101604052810190620000379190620001dc565b620000576200004b6200009260201b60201c565b6200009a60201b60201c565b8073ffffffffffffffffffffffffffffffffffffffff1660808173ffffffffffffffffffffffffffffffffffffffff1681525050506200020e565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000620001908262000163565b9050919050565b6000620001a48262000183565b9050919050565b620001b68162000197565b8114620001c257600080fd5b50565b600081519050620001d681620001ab565b92915050565b600060208284031215620001f557620001f46200015e565b5b60006200020584828501620001c5565b91505092915050565b60805161165962000238600039600081816103d00152818161055d015261070d01526116596000f3fe608060405234801561001057600080fd5b50600436106100ea5760003560e01c8063b382e4c51161008c578063c66485b211610066578063c66485b214610273578063da8c229e1461028f578063e0dba60f146102bf578063f2fde38b146102db576100ea565b8063b382e4c5146101f5578063bffbe61c14610213578063c47f002714610243576100ea565b8063715018a6116100c8578063715018a61461017f5780637a806d6b14610189578063828eab0e146101b95780638da5cb5b146101d7576100ea565b80630f5a5466146100ef5780631e83409a1461011f578063656696311461014f575b600080fd5b61010960048036038101906101049190610d08565b6102f7565b6040516101169190610d61565b60405180910390f35b61013960048036038101906101349190610d7c565b61030c565b6040516101469190610d61565b60405180910390f35b61016960048036038101906101649190610da9565b610342565b6040516101769190610d61565b60405180910390f35b61018761061f565b005b6101a3600480360381019061019e9190610f42565b610633565b6040516101b09190610d61565b60405180910390f35b6101c16106bc565b6040516101ce9190611024565b60405180910390f35b6101df6106e2565b6040516101ec919061104e565b60405180910390f35b6101fd61070b565b60405161020a919061108a565b60405180910390f35b61022d60048036038101906102289190610d7c565b61072f565b60405161023a9190610d61565b60405180910390f35b61025d600480360381019061025891906110a5565b61078c565b60405161026a9190610d61565b60405180910390f35b61028d60048036038101906102889190610d7c565b6107c3565b005b6102a960048036038101906102a49190610d7c565b6108c1565b6040516102b69190611109565b60405180910390f35b6102d960048036038101906102d49190611150565b6108e1565b005b6102f560048036038101906102f09190610d7c565b610992565b005b6000610304338484610342565b905092915050565b600061033b3383600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16610342565b9050919050565b6000833373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614806103c85750600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff165b8061046b57507f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff1663e985e9c582336040518363ffffffff1660e01b8152600401610429929190611190565b602060405180830381865afa158015610446573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061046a91906111ce565b5b8061047b575061047a81610a15565b5b6104ba576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016104b1906112a4565b60405180910390fd5b60006104c586610ac4565b905060007f91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e260001b826040516020016104ff9291906112e5565b604051602081830303815290604052805190602001209050808773ffffffffffffffffffffffffffffffffffffffff167f6ada868dd3058cf77a48a74489fd7963688e5464b2b0fa957ace976243270e9260405160405180910390a37f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16635ef2c7f07f91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e260001b84898960006040518663ffffffff1660e01b81526004016105e0959493929190611360565b600060405180830381600087803b1580156105fa57600080fd5b505af115801561060e573d6000803e3d6000fd5b505050508093505050509392505050565b610627610b4c565b6106316000610bca565b565b600080610641868686610342565b90508373ffffffffffffffffffffffffffffffffffffffff16637737221382856040518363ffffffff1660e01b815260040161067e929190611421565b600060405180830381600087803b15801561069857600080fd5b505af11580156106ac573d6000803e3d6000fd5b5050505080915050949350505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b7f000000000000000000000000000000000000000000000000000000000000000081565b60007f91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e260001b61075e83610ac4565b60405160200161076f9291906112e5565b604051602081830303815290604052805190602001209050919050565b60006107bc3333600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1685610633565b9050919050565b6107cb610b4c565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff160361083a576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610831906114c3565b60405180910390fd5b80600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff167feae17a84d9eb83d8c8eb317f9e7d64857bc363fa51674d996c023f4340c577cf60405160405180910390a250565b60016020528060005260406000206000915054906101000a900460ff1681565b6108e9610b4c565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055508173ffffffffffffffffffffffffffffffffffffffff167f4c97694570a07277810af7e5669ffd5f6a2d6b74b6e9a274b8b870fd5114cf87826040516109869190611109565b60405180910390a25050565b61099a610b4c565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610a09576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610a0090611555565b60405180910390fd5b610a1281610bca565b50565b60008173ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6040518163ffffffff1660e01b8152600401602060405180830381865afa925050508015610a7f57506040513d601f19601f82011682018060405250810190610a7c919061158a565b60015b610a8c5760009050610abf565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16149150505b919050565b600060285b6000811115610b3f576001810390507f3031323334353637383961626364656600000000000000000000000000000000600f84161a81536010830492506001810390507f3031323334353637383961626364656600000000000000000000000000000000600f84161a8153601083049250610ac9565b5060286000209050919050565b610b54610c8e565b73ffffffffffffffffffffffffffffffffffffffff16610b726106e2565b73ffffffffffffffffffffffffffffffffffffffff1614610bc8576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610bbf90611603565b60405180910390fd5b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600033905090565b6000604051905090565b600080fd5b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610cd582610caa565b9050919050565b610ce581610cca565b8114610cf057600080fd5b50565b600081359050610d0281610cdc565b92915050565b60008060408385031215610d1f57610d1e610ca0565b5b6000610d2d85828601610cf3565b9250506020610d3e85828601610cf3565b9150509250929050565b6000819050919050565b610d5b81610d48565b82525050565b6000602082019050610d766000830184610d52565b92915050565b600060208284031215610d9257610d91610ca0565b5b6000610da084828501610cf3565b91505092915050565b600080600060608486031215610dc257610dc1610ca0565b5b6000610dd086828701610cf3565b9350506020610de186828701610cf3565b9250506040610df286828701610cf3565b9150509250925092565b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610e4f82610e06565b810181811067ffffffffffffffff82111715610e6e57610e6d610e17565b5b80604052505050565b6000610e81610c96565b9050610e8d8282610e46565b919050565b600067ffffffffffffffff821115610ead57610eac610e17565b5b610eb682610e06565b9050602081019050919050565b82818337600083830152505050565b6000610ee5610ee084610e92565b610e77565b905082815260208101848484011115610f0157610f00610e01565b5b610f0c848285610ec3565b509392505050565b600082601f830112610f2957610f28610dfc565b5b8135610f39848260208601610ed2565b91505092915050565b60008060008060808587031215610f5c57610f5b610ca0565b5b6000610f6a87828801610cf3565b9450506020610f7b87828801610cf3565b9350506040610f8c87828801610cf3565b925050606085013567ffffffffffffffff811115610fad57610fac610ca5565b5b610fb987828801610f14565b91505092959194509250565b6000819050919050565b6000610fea610fe5610fe084610caa565b610fc5565b610caa565b9050919050565b6000610ffc82610fcf565b9050919050565b600061100e82610ff1565b9050919050565b61101e81611003565b82525050565b60006020820190506110396000830184611015565b92915050565b61104881610cca565b82525050565b6000602082019050611063600083018461103f565b92915050565b600061107482610ff1565b9050919050565b61108481611069565b82525050565b600060208201905061109f600083018461107b565b92915050565b6000602082840312156110bb576110ba610ca0565b5b600082013567ffffffffffffffff8111156110d9576110d8610ca5565b5b6110e584828501610f14565b91505092915050565b60008115159050919050565b611103816110ee565b82525050565b600060208201905061111e60008301846110fa565b92915050565b61112d816110ee565b811461113857600080fd5b50565b60008135905061114a81611124565b92915050565b6000806040838503121561116757611166610ca0565b5b600061117585828601610cf3565b92505060206111868582860161113b565b9150509250929050565b60006040820190506111a5600083018561103f565b6111b2602083018461103f565b9392505050565b6000815190506111c881611124565b92915050565b6000602082840312156111e4576111e3610ca0565b5b60006111f2848285016111b9565b91505092915050565b600082825260208201905092915050565b7f526576657273655265676973747261723a2043616c6c6572206973206e6f742060008201527f6120636f6e74726f6c6c6572206f7220617574686f726973656420627920616460208201527f6472657373206f7220746865206164647265737320697473656c660000000000604082015250565b600061128e605b836111fb565b91506112998261120c565b606082019050919050565b600060208201905081810360008301526112bd81611281565b9050919050565b6000819050919050565b6112df6112da82610d48565b6112c4565b82525050565b60006112f182856112ce565b60208201915061130182846112ce565b6020820191508190509392505050565b6000819050919050565b600067ffffffffffffffff82169050919050565b600061134a61134561134084611311565b610fc5565b61131b565b9050919050565b61135a8161132f565b82525050565b600060a0820190506113756000830188610d52565b6113826020830187610d52565b61138f604083018661103f565b61139c606083018561103f565b6113a96080830184611351565b9695505050505050565b600081519050919050565b60005b838110156113dc5780820151818401526020810190506113c1565b60008484015250505050565b60006113f3826113b3565b6113fd81856111fb565b935061140d8185602086016113be565b61141681610e06565b840191505092915050565b60006040820190506114366000830185610d52565b818103602083015261144881846113e8565b90509392505050565b7f526576657273655265676973747261723a205265736f6c76657220616464726560008201527f7373206d757374206e6f74206265203000000000000000000000000000000000602082015250565b60006114ad6030836111fb565b91506114b882611451565b604082019050919050565b600060208201905081810360008301526114dc816114a0565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b600061153f6026836111fb565b915061154a826114e3565b604082019050919050565b6000602082019050818103600083015261156e81611532565b9050919050565b60008151905061158481610cdc565b92915050565b6000602082840312156115a05761159f610ca0565b5b60006115ae84828501611575565b91505092915050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b60006115ed6020836111fb565b91506115f8826115b7565b602082019050919050565b6000602082019050818103600083015261161c816115e0565b905091905056fea2646970667358221220cf9146e7579fa05326abaa2c778ff4a248430734bcd287b1ac9825e60739645d64736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100ea5760003560e01c8063b382e4c51161008c578063c66485b211610066578063c66485b214610273578063da8c229e1461028f578063e0dba60f146102bf578063f2fde38b146102db576100ea565b8063b382e4c5146101f5578063bffbe61c14610213578063c47f002714610243576100ea565b8063715018a6116100c8578063715018a61461017f5780637a806d6b14610189578063828eab0e146101b95780638da5cb5b146101d7576100ea565b80630f5a5466146100ef5780631e83409a1461011f578063656696311461014f575b600080fd5b61010960048036038101906101049190610d08565b6102f7565b6040516101169190610d61565b60405180910390f35b61013960048036038101906101349190610d7c565b61030c565b6040516101469190610d61565b60405180910390f35b61016960048036038101906101649190610da9565b610342565b6040516101769190610d61565b60405180910390f35b61018761061f565b005b6101a3600480360381019061019e9190610f42565b610633565b6040516101b09190610d61565b60405180910390f35b6101c16106bc565b6040516101ce9190611024565b60405180910390f35b6101df6106e2565b6040516101ec919061104e565b60405180910390f35b6101fd61070b565b60405161020a919061108a565b60405180910390f35b61022d60048036038101906102289190610d7c565b61072f565b60405161023a9190610d61565b60405180910390f35b61025d600480360381019061025891906110a5565b61078c565b60405161026a9190610d61565b60405180910390f35b61028d60048036038101906102889190610d7c565b6107c3565b005b6102a960048036038101906102a49190610d7c565b6108c1565b6040516102b69190611109565b60405180910390f35b6102d960048036038101906102d49190611150565b6108e1565b005b6102f560048036038101906102f09190610d7c565b610992565b005b6000610304338484610342565b905092915050565b600061033b3383600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16610342565b9050919050565b6000833373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614806103c85750600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff165b8061046b57507f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff1663e985e9c582336040518363ffffffff1660e01b8152600401610429929190611190565b602060405180830381865afa158015610446573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061046a91906111ce565b5b8061047b575061047a81610a15565b5b6104ba576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016104b1906112a4565b60405180910390fd5b60006104c586610ac4565b905060007f91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e260001b826040516020016104ff9291906112e5565b604051602081830303815290604052805190602001209050808773ffffffffffffffffffffffffffffffffffffffff167f6ada868dd3058cf77a48a74489fd7963688e5464b2b0fa957ace976243270e9260405160405180910390a37f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16635ef2c7f07f91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e260001b84898960006040518663ffffffff1660e01b81526004016105e0959493929190611360565b600060405180830381600087803b1580156105fa57600080fd5b505af115801561060e573d6000803e3d6000fd5b505050508093505050509392505050565b610627610b4c565b6106316000610bca565b565b600080610641868686610342565b90508373ffffffffffffffffffffffffffffffffffffffff16637737221382856040518363ffffffff1660e01b815260040161067e929190611421565b600060405180830381600087803b15801561069857600080fd5b505af11580156106ac573d6000803e3d6000fd5b5050505080915050949350505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b7f000000000000000000000000000000000000000000000000000000000000000081565b60007f91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e260001b61075e83610ac4565b60405160200161076f9291906112e5565b604051602081830303815290604052805190602001209050919050565b60006107bc3333600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1685610633565b9050919050565b6107cb610b4c565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff160361083a576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610831906114c3565b60405180910390fd5b80600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff167feae17a84d9eb83d8c8eb317f9e7d64857bc363fa51674d996c023f4340c577cf60405160405180910390a250565b60016020528060005260406000206000915054906101000a900460ff1681565b6108e9610b4c565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055508173ffffffffffffffffffffffffffffffffffffffff167f4c97694570a07277810af7e5669ffd5f6a2d6b74b6e9a274b8b870fd5114cf87826040516109869190611109565b60405180910390a25050565b61099a610b4c565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610a09576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610a0090611555565b60405180910390fd5b610a1281610bca565b50565b60008173ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6040518163ffffffff1660e01b8152600401602060405180830381865afa925050508015610a7f57506040513d601f19601f82011682018060405250810190610a7c919061158a565b60015b610a8c5760009050610abf565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16149150505b919050565b600060285b6000811115610b3f576001810390507f3031323334353637383961626364656600000000000000000000000000000000600f84161a81536010830492506001810390507f3031323334353637383961626364656600000000000000000000000000000000600f84161a8153601083049250610ac9565b5060286000209050919050565b610b54610c8e565b73ffffffffffffffffffffffffffffffffffffffff16610b726106e2565b73ffffffffffffffffffffffffffffffffffffffff1614610bc8576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610bbf90611603565b60405180910390fd5b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600033905090565b6000604051905090565b600080fd5b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610cd582610caa565b9050919050565b610ce581610cca565b8114610cf057600080fd5b50565b600081359050610d0281610cdc565b92915050565b60008060408385031215610d1f57610d1e610ca0565b5b6000610d2d85828601610cf3565b9250506020610d3e85828601610cf3565b9150509250929050565b6000819050919050565b610d5b81610d48565b82525050565b6000602082019050610d766000830184610d52565b92915050565b600060208284031215610d9257610d91610ca0565b5b6000610da084828501610cf3565b91505092915050565b600080600060608486031215610dc257610dc1610ca0565b5b6000610dd086828701610cf3565b9350506020610de186828701610cf3565b9250506040610df286828701610cf3565b9150509250925092565b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610e4f82610e06565b810181811067ffffffffffffffff82111715610e6e57610e6d610e17565b5b80604052505050565b6000610e81610c96565b9050610e8d8282610e46565b919050565b600067ffffffffffffffff821115610ead57610eac610e17565b5b610eb682610e06565b9050602081019050919050565b82818337600083830152505050565b6000610ee5610ee084610e92565b610e77565b905082815260208101848484011115610f0157610f00610e01565b5b610f0c848285610ec3565b509392505050565b600082601f830112610f2957610f28610dfc565b5b8135610f39848260208601610ed2565b91505092915050565b60008060008060808587031215610f5c57610f5b610ca0565b5b6000610f6a87828801610cf3565b9450506020610f7b87828801610cf3565b9350506040610f8c87828801610cf3565b925050606085013567ffffffffffffffff811115610fad57610fac610ca5565b5b610fb987828801610f14565b91505092959194509250565b6000819050919050565b6000610fea610fe5610fe084610caa565b610fc5565b610caa565b9050919050565b6000610ffc82610fcf565b9050919050565b600061100e82610ff1565b9050919050565b61101e81611003565b82525050565b60006020820190506110396000830184611015565b92915050565b61104881610cca565b82525050565b6000602082019050611063600083018461103f565b92915050565b600061107482610ff1565b9050919050565b61108481611069565b82525050565b600060208201905061109f600083018461107b565b92915050565b6000602082840312156110bb576110ba610ca0565b5b600082013567ffffffffffffffff8111156110d9576110d8610ca5565b5b6110e584828501610f14565b91505092915050565b60008115159050919050565b611103816110ee565b82525050565b600060208201905061111e60008301846110fa565b92915050565b61112d816110ee565b811461113857600080fd5b50565b60008135905061114a81611124565b92915050565b6000806040838503121561116757611166610ca0565b5b600061117585828601610cf3565b92505060206111868582860161113b565b9150509250929050565b60006040820190506111a5600083018561103f565b6111b2602083018461103f565b9392505050565b6000815190506111c881611124565b92915050565b6000602082840312156111e4576111e3610ca0565b5b60006111f2848285016111b9565b91505092915050565b600082825260208201905092915050565b7f526576657273655265676973747261723a2043616c6c6572206973206e6f742060008201527f6120636f6e74726f6c6c6572206f7220617574686f726973656420627920616460208201527f6472657373206f7220746865206164647265737320697473656c660000000000604082015250565b600061128e605b836111fb565b91506112998261120c565b606082019050919050565b600060208201905081810360008301526112bd81611281565b9050919050565b6000819050919050565b6112df6112da82610d48565b6112c4565b82525050565b60006112f182856112ce565b60208201915061130182846112ce565b6020820191508190509392505050565b6000819050919050565b600067ffffffffffffffff82169050919050565b600061134a61134561134084611311565b610fc5565b61131b565b9050919050565b61135a8161132f565b82525050565b600060a0820190506113756000830188610d52565b6113826020830187610d52565b61138f604083018661103f565b61139c606083018561103f565b6113a96080830184611351565b9695505050505050565b600081519050919050565b60005b838110156113dc5780820151818401526020810190506113c1565b60008484015250505050565b60006113f3826113b3565b6113fd81856111fb565b935061140d8185602086016113be565b61141681610e06565b840191505092915050565b60006040820190506114366000830185610d52565b818103602083015261144881846113e8565b90509392505050565b7f526576657273655265676973747261723a205265736f6c76657220616464726560008201527f7373206d757374206e6f74206265203000000000000000000000000000000000602082015250565b60006114ad6030836111fb565b91506114b882611451565b604082019050919050565b600060208201905081810360008301526114dc816114a0565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b600061153f6026836111fb565b915061154a826114e3565b604082019050919050565b6000602082019050818103600083015261156e81611532565b9050919050565b60008151905061158481610cdc565b92915050565b6000602082840312156115a05761159f610ca0565b5b60006115ae84828501611575565b91505092915050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b60006115ed6020836111fb565b91506115f8826115b7565b602082019050919050565b6000602082019050818103600083015261161c816115e0565b905091905056fea2646970667358221220cf9146e7579fa05326abaa2c778ff4a248430734bcd287b1ac9825e60739645d64736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "claim(address)": {
+        "details": "Transfers ownership of the reverse FNS record associated with the      calling account.",
+        "params": {
+          "_owner": "The address to set as the owner of the reverse record in FNS."
+        },
+        "returns": {
+          "_0": "The FNS node hash of the reverse record."
+        }
+      },
+      "claimForAddr(address,address,address)": {
+        "details": "Transfers ownership of the reverse FNS record associated with the      calling account.",
+        "params": {
+          "_owner": "The address to set as the owner of the reverse record in FNS.",
+          "addr": "The reverse record to set",
+          "resolver": "The resolver of the reverse node"
+        },
+        "returns": {
+          "_0": "The FNS node hash of the reverse record."
+        }
+      },
+      "claimWithResolver(address,address)": {
+        "details": "Transfers ownership of the reverse FNS record associated with the      calling account.",
+        "params": {
+          "_owner": "The address to set as the owner of the reverse record in FNS.",
+          "resolver": "The address of the resolver to set; 0 to leave unchanged."
+        },
+        "returns": {
+          "_0": "The FNS node hash of the reverse record."
+        }
+      },
+      "constructor": {
+        "details": "Constructor",
+        "params": {
+          "_fns": "The address of the FNS registry."
+        }
+      },
+      "node(address)": {
+        "details": "Returns the node hash for a given account's reverse records.",
+        "params": {
+          "addr": "The address to hash"
+        },
+        "returns": {
+          "_0": "The FNS node hash."
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "setName(string)": {
+        "details": "Sets the `name()` record for the reverse FNS record associated with the calling account. First updates the resolver to the default reverse resolver if necessary.",
+        "params": {
+          "name": "The name to set for this address."
+        },
+        "returns": {
+          "_0": "The FNS node hash of the reverse record."
+        }
+      },
+      "setNameForAddr(address,address,address,string)": {
+        "details": "Sets the `name()` record for the reverse FNS record associated with the account provided. Updates the resolver to a designated resolver Only callable by controllers and authorised users",
+        "params": {
+          "_owner": "The owner of the reverse node",
+          "addr": "The reverse record to set",
+          "name": "The name to set for this address.",
+          "resolver": "The resolver of the reverse node"
+        },
+        "returns": {
+          "_0": "The FNS node hash of the reverse record."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 6173,
+        "contract": "contracts/ReverseRegistrar.sol:ReverseRegistrar",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 3655,
+        "contract": "contracts/ReverseRegistrar.sol:ReverseRegistrar",
+        "label": "controllers",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 2504,
+        "contract": "contracts/ReverseRegistrar.sol:ReverseRegistrar",
+        "label": "defaultResolver",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_contract(NameResolver)7216"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_contract(NameResolver)7216": {
+        "encoding": "inplace",
+        "label": "contract NameResolver",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      }
+    }
+  }
+}
