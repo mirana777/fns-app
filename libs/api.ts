@@ -68,7 +68,8 @@ export default {
 
   async estimateTxFee(name: string, duration: number) {
     const contract = (await useContractIRegistrarController()) as any
-    return await contract.rentPrice(name, duration)
+    const _name = name.replace(/\.fil$/, '')
+    return await contract.rentPrice(_name, duration)
   },
 
   async registerName(
