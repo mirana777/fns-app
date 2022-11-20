@@ -4,16 +4,16 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        tabWidth: 2, // tab 宽度
-        singleQuote: true, // 单引号
-        trailingComma: 'none', // 对象末尾无逗号
-        printWidth: 100, // 单行字符上限
-        semi: false, // 句末无分号
-        bracketSpacing: true, // 对象和数组首尾留空格
-        arrowParens: 'avoid', // 箭头函数单参数省略括号
-        insertPragma: false, // 文件顶部无需 @format 标记
-        useTabs: false, // 使用空格而非缩进符
-        endOfLine: 'auto' // 兼容 Windows 换行
+        tabWidth: 2,
+        singleQuote: true,
+        trailingComma: 'none',
+        printWidth: 100,
+        semi: false,
+        bracketSpacing: true,
+        arrowParens: 'avoid',
+        insertPragma: false,
+        useTabs: false,
+        endOfLine: 'auto'
       }
     ],
 

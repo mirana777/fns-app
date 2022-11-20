@@ -1,0 +1,3 @@
+<template>
+  <el-empty />
+</template>
